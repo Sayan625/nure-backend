@@ -18,7 +18,7 @@ router.post('/', verify, async (req, res) => {
 
 });
 
-//getting all order by all users for admin only
+//getting all order by all users for admin only not implemented
 router.get('/admin', async (req, res) => {
     try {
         const orders = await ORDER.find()
@@ -45,7 +45,7 @@ router.get('/', verify, async (req, res) => {
     }
 });
 
-//getting order by ID for a specific user
+//getting order by ID for a specific user 
 router.get('/:id', verify, async (req, res) => {
 
     if (req.data.id) {
@@ -60,6 +60,7 @@ router.get('/:id', verify, async (req, res) => {
     }
 });
 
+//delete order by ID admin only not implemented
 router.delete('/:id', verify, async (req, res) => {
     const id = req.params.id
     try {

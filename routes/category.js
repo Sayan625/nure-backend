@@ -1,8 +1,9 @@
 const router = require('express').Router()
+const verify = require('../middlewere/verify');
 const CATEGORY = require('../models/CATEGORY')
 
-//makingnew category admin only
-router.post('/admin', async (req, res) => {
+//makingnew category admin only not implemented
+router.post('/admin',verify, async (req, res) => {
     const isNew = req.query.new;
     if (isNew) {
         const newCategory = new CATEGORY(req.body)
