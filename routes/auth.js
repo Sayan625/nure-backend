@@ -2,6 +2,8 @@ const router = require('express').Router();
 const USER = require('../models/USER');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+const dotenv=require('dotenv')
+dotenv.config()
 
 //reggistering new user
 router.post('/register', async (req, res) => {
