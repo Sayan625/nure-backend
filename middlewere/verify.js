@@ -9,7 +9,7 @@ const verifyToken = (req, res, next) => {
 
   } 
 
-  JWT.verify(token, process.env.JWT_kEY, (err,data) => {
+  JWT.verify(token, process.env.JWT_KEY, (err,data) => {
     console.log("token",token)
     if (err) {
       // console.log(err)
